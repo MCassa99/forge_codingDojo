@@ -1,9 +1,12 @@
-function greet (name, hora) {
+var hora = new Date();
+
+function greet (name, actualHora) {
         if (name == 'Count Dooku') {
         console.log('¡Voy por ti, Dooku!');
     } else {
-        console.log('¡Buen día, ' + name +'! Son las ' + hora + 'hs');
+        console.log('¡Buen día, ' + name +'! Son las ' + actualHora + 'hs');
     }
 }
 
-greet("Count Dooku", 16.15);
+var actualHora = hora.getHours() + ':' + hora.getMinutes();
+greet("Count Doku", actualHora);
